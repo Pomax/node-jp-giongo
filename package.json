@@ -1,7 +1,7 @@
 {
   "name": "jp-giongo",
   "version": "0.0.2",
-  "repository": "https://github.com/Pomax/node-jp-conversion.git",
+  "repository": "https://github.com/Pomax/node-jp-giongo.git",
   "dependencies": {
     "lodash": "^2.4.1",
     "jp-conversion": "0.0.2"
