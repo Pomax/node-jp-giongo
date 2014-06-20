@@ -7650,16 +7650,14 @@ var definitions = {
   "ばしゃばしゃ": {
     "action": [
       "splashing, paddling"
+    ],
+    "onomatopoeia": [
+      "splashing"
     ]
   },
   "ばしゃっ": {
     "action": [
       "a single forcefull splash"
-    ]
-  },
-  "ばしゃばしゃ": {
-    "onomatopoeia": [
-      "splasing"
     ]
   },
   "ばしゃり": {
