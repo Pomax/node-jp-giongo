@@ -7647,7 +7647,7 @@ var definitions = {
       "splashing"
     ]
   },
-  "ばしゃｂしゃ": {
+  "ばしゃばしゃ": {
     "action": [
       "splashing, paddling"
     ]
