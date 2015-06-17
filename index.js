@@ -11698,7 +11698,7 @@ var definitions = {
   }
 };
 
-var ime = new require("jp-conversion");
+var ime = require("jp-conversion");
 
 var keys = Object.keys(definitions);
 
