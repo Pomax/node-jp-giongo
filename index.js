@@ -11730,16 +11730,25 @@ module.exports = {
     return res;
   },
   find: function(input) {
-    var conv = ime.convert(input);
+    var searchterm = '', filter = false;
+
+    if (input.searchterm) {
+      if (input.filter) {
+        filter = input.filter;
+      }
+      searchterm = input.searchterm;
+    } else { searchterm = input }
+
+    var conv = ime.convert(searchterm);
     // japanese search
     if(conv.katakana) {
       var res = {},
           get = this.get,
           kana = conv.katakana;
       keys.forEach(function(key) {
-        if(definitions[key].katakana.indexOf(kana) === 0) {
-          res[key] = get(key);
-        }
+        if(definitions[key].katakana.indexOf(kana) !== 0) return;
+        if(filter && !definitions[key][filter]) return;
+        res[key] = get(key);
       });
       return res;
     }
@@ -11748,7 +11757,7 @@ module.exports = {
       var res = {},
           get = this.get;
       keys.forEach(function(key) {
-        if(searchMeaning(key, input)) {
+        if(searchMeaning(key, searchterm)) {
           res[key] = get(key);
         }
       });
